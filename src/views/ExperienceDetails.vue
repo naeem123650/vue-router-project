@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="row ml-1 mt-3">
+    <div class="row ml-1 mt-3 mr-1">
       <div class="col-md-12">
         <div class="card text-left shadow">
           <div class="card-body">

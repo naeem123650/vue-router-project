@@ -1,16 +1,20 @@
 <template>
   <div>
     <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <router-link class="navbar-brand" :to="{ name: 'Home' }"
+        >Travel Gallery</router-link
+      >
       <button
-        class="navbar-toggler d-lg-none"
+        class="navbar-toggler d-lg-none text-white"
         type="button"
         data-toggle="collapse"
         data-target="#collapsibleNavId"
         aria-controls="collapsibleNavId"
         aria-expanded="false"
         aria-label="Toggle navigation"
-      ></button>
+      >
+        <i class="fa fa-bars"></i>
+      </button>
       <div class="collapse navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
           <li class="nav-item active">
@@ -32,6 +36,11 @@
               >{{ destination.name }}</router-link
             >
           </li>
+          <li class="nav-item">
+            <span class="nav-link">
+              <GoBack />
+            </span>
+          </li>
         </ul>
       </div>
     </nav>
@@ -40,8 +49,13 @@
 
 <script>
 import store from "../../store.js";
+import GoBack from "@/components/GoBack";
+
 export default {
   name: "Navbar",
+  components: {
+    GoBack,
+  },
   computed: {
     destinations() {
       return store.destinations;

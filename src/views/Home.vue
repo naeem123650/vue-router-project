@@ -2,9 +2,9 @@
 <template>
   <div>
     <div class="row">
-      <b4 class="col-md-12 text-center mt-3">
+      <div class="col-md-12 text-center mt-3">
         <h3>All Destinations</h3>
-      </b4>
+      </div>
     </div>
     <div class="row">
       <div
@@ -46,5 +46,3 @@ export default {
   },
 };
 </script>
-
-<style></style>
